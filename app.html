@@ -233,5 +233,21 @@
   <footer>
     BLACK DIAMOND AUTO DETAILING · PREMIUM MOBILE SERVICE
   </footer>
+
+<script type="module">
+  import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+  const SUPABASE_URL = 'https://bzxnofrfvhowidjfwedt.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_nwU_Ai57qPmLwelISCt98w_xf_GBufo';
+
+  const supabase = createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+  );
+
+  window.supabaseClient = supabase;
+  console.log('Black Diamond connected to Supabase');
+</script>
+
 </body>
 </html>
