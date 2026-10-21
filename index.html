@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+
+  <title>Black Diamond | דיטיילינג וליטוש פנסים</title>
+  <meta name="description" content="Black Diamond Auto Detailing — ליטוש פנסים מקצועי עד בית הלקוח, דיטיילינג וחידוש מראה הרכב. שירות בגן יבנה, אשדוד והסביבה.">
+  <meta name="robots" content="index,follow">
+
+  <style>
+    :root {
+      --bg: #090909;
+      --panel: #131313;
+      --gold: #d6b36a;
+      --gold-light: #f3d99c;
+      --white: #f7f5ef;
+      --muted: #aaa69d;
+      --border: rgba(214,179,106,.24);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--white);
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(9,9,9,.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--gold-light);
+      font-size: 21px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .brand small {
+      display: block;
+      font-size: 9px;
+      color: var(--muted);
+      letter-spacing: 3px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover { color: var(--gold); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 22px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: #101010;
+      font-weight: 800;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .button:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      color: var(--gold-light);
+      background: transparent;
+    }
+
+    .button-outline:hover {
+      color: #101010;
+      background: var(--gold);
+    }
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 15% 35%, rgba(151,112,44,.17), transparent 48%),
+        linear-gradient(110deg, #17140f 0%, #0b0b0b 48%, #090909 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::after {
+      content: "BD";
+      position: absolute;
+      left: -25px;
+      bottom: -150px;
+      font-size: clamp(260px, 44vw, 600px);
+      font-weight: 900;
+      color: rgba(214,179,106,.035);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 740px;
+      padding: 90px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.12;
+      margin: 20px 0;
+      letter-spacing: -1.5px;
+    }
+
+    h1 span, .gold { color: var(--gold-light); }
+
+    .hero p {
+      max-width: 570px;
+      color: #c4c0b7;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .location-note {
+      margin-top: 30px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    section { padding: 85px 0; }
+
+    .section-heading {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(29px, 4vw, 43px);
+      margin: 8px 0 12px;
+      line-height: 1.3;
+    }
+
+    .section-heading p { color: var(--muted); }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service {
+      padding: 28px;
+      background: linear-gradient(145deg, #171717, #101010);
+      border: 1px solid #28251f;
+      min-height: 230px;
+    }
+
+    .service-number {
+      font-size: 12px;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    .service h3 { font-size: 22px; margin: 14px 0 8px; }
+    .service p { color: var(--muted); font-size: 15px; }
+
+    .feature {
+      background: #10100e;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .price-panel {
+      padding: 38px;
+      background: linear-gradient(145deg, #1d1a13, #111);
+      border: 1px solid var(--border);
+    }
+
+    .price {
+      font-size: 54px;
+      font-weight: 900;
+      color: var(--gold-light);
+      line-height: 1.3;
+    }
+
+    .price-panel p, .feature-copy p { color: var(--muted); }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+
+    .checklist li { margin: 12px 0; }
+    .checklist li::before {
+      content: "✓";
+      color: var(--gold);
+      margin-left: 10px;
+    }
+
+    .gallery-note {
+      border: 1px dashed #51442a;
+      padding: 35px;
+      text-align: center;
+      color: var(--muted);
+      background: #101010;
+    }
+
+    .gallery-note strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      text-align: center;
+      background: radial-gradient(ellipse at center, #201a10, #090909 72%);
+    }
+
+    .contact h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin: 10px 0;
+    }
+
+    .contact p { color: var(--muted); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 0;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 20;
+      padding: 13px 18px;
+      border-radius: 40px;
+      background: #25d366;
+      color: #071b0d;
+      font-size: 14px;
+      font-weight: bold;
+      box-shadow: 0 5px 25px #0008;
+    }
+
+    @media (max-width: 760px) {
+      .nav { min-height: 72px; }
+      nav { gap: 12px; font-size: 12px; }
+      nav .nav-extra { display: none; }
+      .brand { font-size: 17px; }
+      .hero { min-height: 560px; }
+      .hero-content { padding: 65px 0; }
+      .hero p { font-size: 16px; }
+      .services { grid-template-columns: 1fr; }
+      .feature-grid { grid-template-columns: 1fr; gap: 28px; }
+      section { padding: 65px 0; }
+      .price-panel { padding: 25px; }
+    }
+
+    @media (max-width: 380px) {
+      nav { gap: 8px; }
+      .brand { font-size: 14px; letter-spacing: 1px; }
+      .button { padding: 12px 15px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">
+        BLACK DIAMOND
+        <small>AUTO DETAILING</small>
+      </a>
+      <nav aria-label="ניווט ראשי">
+        <a href="#services">שירותים</a>
+        <a href="#headlights">ליטוש פנסים</a>
+        <a class="nav-extra" href="#gallery">העבודות שלנו</a>
+        <a href="#contact">צור קשר</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">PRECISION. QUALITY. DETAIL.</div>
+          <h1>
+            המראה של הרכב שלך.<br>
+            <span>ברמה אחרת.</span>
+          </h1>
+          <p>
+            דיטיילינג מקצועי, חידוש מראה הרכב וליטוש פנסים
+            עד בית הלקוח. עבודה מדויקת, גימור מוקפד ושירות אישי.
+          </p>
+          <div class="actions">
+            <a class="button" href="https://wa.me/972524117272?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%2F%D7%AA%20%D7%91%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%20Black%20Diamond">
+              לתיאום ב-WhatsApp
+            </a>
+            <a class="button button-outline" href="#services">לכל השירותים</a>
+          </div>
+          <div class="location-note">
+            שירות עד הבית · גן יבנה · אשדוד והסביבה
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">OUR SERVICES</div>
+          <h2>כל פרט עושה את ההבדל</h2>
+          <p>שירותי טיפוח וחידוש לרכב, עם התאמת שיטת העבודה למצב הרכב ולתוצאה הרצויה.</p>
+        </div>
+
+        <div class="services">
+          <article class="service">
+            <div class="service-number">01 / RESTORE</div>
+            <h3>ליטוש וחידוש פנסים</h3>
+            <p>טיפול בפנסים עכורים ודהויים לשיפור המראה והבהירות, עם גימור והגנה מתאימים.</p>
+          </article>
+          <article class="service">
+            <div class="service-number">02 / DETAIL</div>
+            <h3>דיטיילינג לרכב</h3>
+            <p>ניקוי וטיפוח פנים וחוץ הרכב, תוך הקפדה על הפרטים הקטנים.</p>
+          </article>
+          <article class="service">
+            <div class="service-number">03 / FINISH</div>
+            <h3>פוליש וחידוש צבע</h3>
+            <p>בחירת תהליך העבודה בהתאם למצב הצבע ולמטרת הטיפול. ניתן לברר התאמה ומחיר ב-WhatsApp.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature" id="headlights">
+      <div class="container feature-grid">
+        <div class="feature-copy">
+          <div class="eyebrow">HEADLIGHT RESTORATION</div>
+          <h2>הפנסים דהויים?<br><span class="gold">אפשר לחדש אותם.</span></h2>
+          <p>
+            במקום להסתפק במראה עכור, בודקים את מצב הפנס
+            ומתאימים תהליך מקצועי של שיוף, ליטוש וגימור.
+            התוצאה ועמידותה תלויות במצב הפנס ובסוג ההגנה.
+          </p>
+          <ul class="checklist">
+            <li>שירות נייד עד בית הלקוח</li>
+            <li>תהליך עבודה בהתאם למצב הפנס</li>
+            <li>גימור והגנה כחלק מתהליך החידוש</li>
+          </ul>
+        </div>
+
+        <div class="price-panel">
+          <div class="eyebrow">MOBILE SERVICE</div>
+          <h3>ליטוש פנסים עד הבית</h3>
+          <div class="price">250 ₪</div>
+          <p>כולל הגעה ללקוח באזורי השירות הרגילים. ליעדים רחוקים יש לתאם מראש.</p>
+          <a class="button" href="https://wa.me/972524117272?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%9C%D7%99%D7%98%D7%95%D7%A9%20%D7%A4%D7%A0%D7%A1%D7%99%D7%9D%20%D7%91-250%20%D7%A9%D7%97">
+            לתיאום ליטוש פנסים
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">OUR WORK</div>
+          <h2>התוצאות מדברות</h2>
+          <p>גלריית עבודות אמיתיות של Black Diamond.</p>
+        </div>
+        <div class="gallery-note">
+          <strong>הגלריה שלך תופיע כאן</strong>
+          בשלב הבא נוסיף תמונות אמיתיות של עבודות לפני ואחרי,
+          כדי שהלקוחות יוכלו לראות את איכות התוצאות.
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="eyebrow">LET'S TALK DETAILS</div>
+        <h2>הרכב שלך. הטיפול הנכון.</h2>
+        <p>לתיאום שירות ולקבלת פרטים, דברו איתנו ב-WhatsApp.</p>
+        <div class="actions" style="justify-content:center; margin-top:25px">
+          <a class="button" href="https://wa.me/972524117272?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%90%D7%AA%D7%A8%20Black%20Diamond">
+            שליחת הודעה
+          </a>
+          <a class="button button-outline" href="tel:+972522336460">
+            חיוג לעסק
+          </a>
+        </div>
+        <p style="margin-top:25px">גן יבנה · אשדוד · הסביבה</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      BLACK DIAMOND AUTO DETAILING · כל הזכויות שמורות ©
+      <span id="year"></span>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float"
+     href="https://wa.me/972524117272?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%90%D7%AA%D7%A8%20Black%20Diamond"
+     aria-label="שליחת הודעה ב-WhatsApp">WhatsApp ↗</a>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
