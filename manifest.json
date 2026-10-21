@@ -9,5 +9,13 @@
   "scope": "./",
   "display": "standalone",
   "background_color": "#080808",
-  "theme_color": "#c9a45c"
+  "theme_color": "#c9a45c",
+  "icons": [
+    {
+      "src": "./BF5871EA-3BF3-46D9-B3CD-7BCB3EB162F8_1_201_a.jpeg",
+      "sizes": "any",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
 }
