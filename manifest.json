@@ -1,0 +1,13 @@
+
+{
+  "name": "Black Diamond Auto Detailing",
+  "short_name": "Black Diamond",
+  "description": "דיטיילינג מקצועי עד הבית",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "./app.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#c9a45c"
+}
