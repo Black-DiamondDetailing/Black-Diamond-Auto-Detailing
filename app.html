@@ -240,6 +240,48 @@
       </div>
     </section>
 
+<section class="booking" id="booking">
+  <h2>הזמנת שירות</h2>
+  <p>בחרו שירות, השאירו פרטים ונחזור אליכם לאישור התור.</p>
+
+  <form id="booking-form">
+    <label for="booking-service">בחירת שירות</label>
+    <select id="booking-service" name="service" required>
+      <option value="">בחרו שירות</option>
+      <option value="a9df77da-c9c5-4fe6-b931-d8fbbb99ff56">ליטוש פנסים</option>
+      <option value="f1bec8af-6abe-4c05-8a68-c674e093a80a">דיטיילינג פנים מלא</option>
+      <option value="b6fb2b6d-7230-4eac-90d0-5158a0a0ae50">ניקוי מושבים</option>
+      <option value="5c990d23-fff9-4165-bcfa-6f065ba42d81">פוליש לרכב</option>
+      <option value="7a049323-7be7-452e-8f78-70e7af0c142f">פוליש עם ציפוי ננו קרמי</option>
+    </select>
+
+    <label for="booking-date">תאריך מבוקש</label>
+    <input id="booking-date" name="date" type="date" required>
+
+    <label for="booking-time">שעה פנויה</label>
+    <select id="booking-time" name="time" required>
+      <option value="">תחילה בחרו שירות ותאריך</option>
+    </select>
+
+    <label for="booking-name">שם מלא</label>
+    <input id="booking-name" name="name" type="text" autocomplete="name" required>
+
+    <label for="booking-phone">טלפון</label>
+    <input id="booking-phone" name="phone" type="tel" autocomplete="tel" required>
+
+    <label for="booking-city">עיר</label>
+    <input id="booking-city" name="city" type="text" autocomplete="address-level2" required>
+
+    <label for="booking-address">כתובת מלאה</label>
+    <input id="booking-address" name="address" type="text" autocomplete="street-address" required>
+
+    <label for="booking-notes">הערות (לא חובה)</label>
+    <textarea id="booking-notes" name="notes" rows="3"></textarea>
+
+    <button type="submit">בדיקת פרטים ושליחת בקשה</button>
+    <p id="booking-message" role="status" aria-live="polite"></p>
+  </form>
+</section>
     <section class="contact">
       <div>
         <h2>מוכנים להתחיל?</h2>
